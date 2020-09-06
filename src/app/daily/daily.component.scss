@@ -1,0 +1,72 @@
+:host{
+    flex:1;
+    height: fit-content;
+    display: flex;
+}
+.daily-card{
+    color: #4d79a7;
+    width: 100%;
+    min-width: 450px;
+    background-color: #4d79a72e;
+    
+    mat-card-header{
+        background-color: #6494c07d;
+        border-radius: 4px;
+        display: flex;
+        justify-content: center;
+        mat-card-title{
+            font-size: 24px;
+            font-weight: bold;
+            padding-top: 10px;
+        }
+    }
+    mat-card-content {
+        padding: 20px;
+        overflow-y: auto;
+        max-height: 600px;
+        min-height: 50px;
+
+        .list-item{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            button{
+                display: block;
+                width: 100%;
+                text-align: start;
+                svg{
+                    margin-right:10px
+                }
+                .prog-title{
+                    display: inline-block;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    max-width: 400px;
+                    font-size: 20px;
+                    font-weight: 600;
+                }
+            }
+            svg:hover{
+                cursor: pointer;
+                opacity: 0.7;
+            }
+        }
+        &::-webkit-scrollbar-track{
+            -webkit-box-shadow: inset 0 0 6px rgba(77,121,167,0.3);
+            border-radius: 10px;
+            background-color: #F5F5F5;
+        }
+        &::-webkit-scrollbar-thumb{
+            border-radius: 10px;
+            -webkit-box-shadow: inset 0 0 6px rgba(77,121,167,.3);
+            background-color: #4d79a7;
+        }
+        &::-webkit-scrollbar{
+            width: 6px;
+            background-color: #F5F5F5;
+        }
+    }
+    &:hover{
+        box-shadow: 0 0 10px 3px #a4bed8;
+    }
+}

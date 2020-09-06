@@ -1,0 +1,83 @@
+:host{
+    flex:1;
+    height: fit-content;
+    display: flex;
+    margin:0 40px;
+}
+.weekly-card{
+    width: 100%;
+    color: #3b9e8b;
+    background-color: #51b4a12e;
+    min-width: 450px;
+    mat-card-header{
+        background-color: #51b4a157;
+        border-radius: 4px;
+        display: flex;
+        justify-content: center;
+        mat-card-title{
+            font-size: 24px;
+            font-weight: bold;
+            padding-top: 10px;
+        }
+    }
+    mat-card-content {
+        padding: 20px;
+        overflow-y: auto;
+        max-height: 600px;
+        min-height: 50px;
+        .day{
+            text-decoration: underline;
+            font-size: 22px;
+            margin-bottom: 4px;
+        }
+        .list-item{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            button{
+                display: block;
+                width: 100%;
+                text-align: start;
+                // margin: 10px 0;
+                svg{
+                    margin-right:10px
+                }
+                .prog-title{
+                    display: inline-block;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    max-width: 400px;
+                    font-size: 20px;
+                    font-weight: 600;
+                }
+            }
+            svg:hover{
+                cursor: pointer;
+                opacity: 0.7;
+            }
+        }
+        .no-register{
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center
+        }
+        &::-webkit-scrollbar-track{
+            -webkit-box-shadow: inset 0 0 6px rgba(77,121,167,0.3);
+            border-radius: 10px;
+            background-color: #F5F5F5;
+        }
+        &::-webkit-scrollbar-thumb{
+            border-radius: 10px;
+            -webkit-box-shadow: inset 0 0 6px rgba(77,121,167,.3);
+            background-color: #3b9e8b;
+        }
+        &::-webkit-scrollbar{
+            width: 6px;
+            background-color: #F5F5F5;
+        }
+    }
+    &:hover{
+        box-shadow: 0 0 10px 3px #9cdbd3;
+    }
+}

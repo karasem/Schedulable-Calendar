@@ -1,0 +1,32 @@
+:host{
+    color:#656060;
+}
+.schedule-panel {
+        display: flex;
+        flex-direction: column;
+        .main-content {
+            display: flex;
+            min-width: 300px;
+            
+            .left-content, .right-content {
+                display: flex;
+                flex-direction: column;
+                box-sizing: border-box;
+                // margin: 8px;
+                flex:1;
+                color:#ed6080;
+                font-weight: 600;
+                margin: 0 20px 10px 20px;
+            }
+        }
+}
+.mat-dialog-actions {
+    display: flex !important;
+    justify-content:flex-end !important;
+    box-sizing: border-box !important;
+}
+.mat-dialog-title {
+    margin-bottom: 0px;
+}
+
+

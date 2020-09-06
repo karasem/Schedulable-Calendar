@@ -1,0 +1,20 @@
+<h2 mat-dialog-title>Delete Schedule</h2>
+<mat-dialog-content>
+    <div class="schedule-panel">
+            <div class="main-content">
+                <div class="left-content">
+                    <p> Are You Sure You Want To Delete The Note Named {{data.title}} ?</p>
+                </div>
+            </div>
+    </div>
+</mat-dialog-content>
+<mat-dialog-actions>
+    <div class="buttons">
+        <button mat-raised-button color="primary"  (click)="closeDialog()" >
+            Cancel
+        </button>
+        <button mat-raised-button [mat-dialog-close]="true" (click)="deleteProgram()"  >
+            Delete
+        </button>
+    </div>
+</mat-dialog-actions>

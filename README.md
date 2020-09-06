@@ -1,27 +1,44 @@
-# Frontend
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.0.
+# Projede Geliştirme Yapmak
 
-## Development server
+Angular projesini çalıştırmak için bazı gereklilikler mevcuttur.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Gereklilik
 
-## Code scaffolding
+[nodejs](https://nodejs.org/en/) 'in kurulu olduğundan mutlaka emin olunuz.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Node.js'in kurulu olduğunu konsoldan `node -v` yazarak öğrenebilirsiniz.
 
-## Build
+Kullandığınız işletim sistemine göre paket yükleme aracı olarak kullanılan uygun [yarn](https://classic.yarnpkg.com/en/docs/install) kurulumunu yapmanız gerekmektedir.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Yarn'ın kurulu olduğunu `yarn --version` yazarak ögrenebilirsiniz.
 
-## Running unit tests
+node.js v8.10.0 veya üstü
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+angular cli 8 veya üstü
 
-## Running end-to-end tests
+## Adım 1: Angular CLI İndirme
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Angular projesini kullanmak veya yeni bir proje kurmak için Angular CLI 'yı indirmek gerekiyor.
 
-## Further help
+```bash
+yarn add -g @angular/cli
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Adım 2: Projeyi Github'dan Çekme
+
+Projeyi Github'dan çektikten sonra konsola `yarn install` veya `yarn` yazarak node modules'ü indirebiliriz. Node modules olmadan proje çalışmayacaktır.
+
+```bash
+yarn install
+```
+
+## Adım 3: Uygulamayı Çalıştırma
+
+Öncelikle projenin kurulduğu frontend dizinine gidilir ve `yarn start` komutu ile proje çalıştırılır.
+
+```bash
+yarn start -o
+```
+
+`-o` ile browserda  http://localhost:4200/  direkt olarak proje görüntülenebilir.

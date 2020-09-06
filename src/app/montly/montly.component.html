@@ -1,0 +1,31 @@
+<mat-card class="montly-card">
+    <mat-card-header>
+        <mat-card-title>{{cardTitle}}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <ng-container *ngFor="let week of Object.keys(montlyProg)">
+            <h3 class="month">{{week}}. Week</h3>
+            <ng-container *ngFor="let day of Object.keys(montlyProg[week])">
+                <ng-container *ngIf="montlyProg[week][day].length>0">
+                        <h3 class="day">{{daysOfWeek[day]}}</h3><br>
+                    <ng-container *ngFor="let prog of montlyProg[week][day] ">
+                        <div class="list-item">
+                            <button [title]="prog.date.toLocaleDateString()" mat-button (click)="editProg(prog)">
+                                <div  class="prog-title">
+                                    &diams; {{prog.title}}
+                                </div>
+                            </button>
+                            <svg fill="#ed6080" (click)="deleteProg(prog)" xmlns="http://www.w3.org/2000/svg"
+                                height="28" viewBox="0 0 24 24" width="28">
+                                <path d="M0 0h24v24H0V0z" fill="none" />
+                                <path
+                                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM8 9h8v10H8V9zm7.5-5l-1-1h-5l-1 1H5v2h14V4z" />
+                                <title>Delete</title>
+                            </svg>
+                        </div>
+                    </ng-container>
+                </ng-container>
+            </ng-container>
+        </ng-container>
+    </mat-card-content>
+</mat-card>

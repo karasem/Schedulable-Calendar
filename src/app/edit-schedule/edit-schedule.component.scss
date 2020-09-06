@@ -1,0 +1,37 @@
+:host{
+    color:#656060;
+}
+.schedule-panel {
+    form {
+        display: flex;
+        flex-direction: column;
+        .main-content {
+            display: flex;
+            min-width: 300px;
+            .left-content, .right-content {
+                display: flex;
+                flex-direction: column;
+                box-sizing: border-box;
+                margin: 8px;
+                flex:1;
+            }
+        }
+        textarea {
+            resize:none;
+        }
+    }
+}
+.mat-dialog-actions {
+    display: flex !important;
+    justify-content:flex-end !important;
+    box-sizing: border-box !important;
+}
+::ng-deep  mat-calendar-header{
+    display: none !important;
+    padding-top: 10px;
+   }
+::ng-deep  .mat-calendar-content{
+    padding-top: 10px !important;
+    margin-top: 10px !important;
+   }
+
