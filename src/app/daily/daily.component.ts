@@ -27,9 +27,10 @@ export class DailyComponent implements OnInit {
 
   ngOnInit(): void {
     const dayIndex = new Date().getDay();
-    const [month, date, year] = new Date().toLocaleDateString().split('/');
-    this.currentDate = date + '/' + month + '/' + year;
+    const monthIndex = new Date().getMonth();
+    this.currentDate = new Date().toLocaleDateString();
     this.cardTitle = `${this.currentDate} / ${this.daysOfWeek[dayIndex]}`;
+
   }
 
   editProg(prog: ISchedule) {

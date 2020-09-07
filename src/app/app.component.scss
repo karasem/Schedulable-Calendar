@@ -6,14 +6,25 @@
     background-repeat:  space round;
     display:flex;
     flex-direction: column;
+    .header {
+        height:70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 36px;
+        padding-top: 10px;
+        color: #9e9c9c;
+    }
     .button-container{
         display: flex;
         justify-content:flex-end ;
         .add-program{
-            margin: 40px 40px 0 0;
-            padding: 0;
+            padding: 5px 10px;
+            color: #dc8505;
+            margin-right:40px;
             min-width: 40px;
             line-height: 40px;
+            
             &:hover{
                 box-shadow: 0 0 6px 2px #dc85057a;
             }
