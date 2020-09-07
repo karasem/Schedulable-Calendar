@@ -20,7 +20,6 @@ export class AppComponent implements OnInit {
 
   groupedDateProg: ICalendar = {};
   lastId = 0;
-  currentDate: string;
   currentMonth: number;
   currentWeek: number;
   currentDay: number;
@@ -31,8 +30,6 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     const date = new Date();
-    const [month, day, year] = date.toLocaleDateString().split('/');
-    this.currentDate = day + '/' + month + '/' + year;
     this.currentDay = date.getDay();
     this.currentMonth = date.getMonth();
     this.currentWeek = Math.floor((date.getDate() + 6) / 7);

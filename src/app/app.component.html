@@ -1,16 +1,19 @@
-
 <div class="main-container">
+    <div class="header">MY NOTEBOOK</div>
+
     <div class="button-container">
-    <button title="Add New Schedule" mat-raised-button class="add-program" (click)="openDialog()">
-        <svg xmlns=" http://www.w3.org/2000/svg" height="28" viewBox="0 0 24 24" width="28">
-            <path d="M0 0h24v24H0z" fill="none" />
-            <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" fill="#dc8505" stroke="#dc8505" /></svg>
-    </button>
-</div>
+        <button title="Add New Schedule" mat-raised-button class="add-program" (click)="openDialog()">
+            <svg xmlns=" http://www.w3.org/2000/svg" height="28" viewBox="0 0 24 24" width="28">
+                <path d="M0 0h24v24H0z" fill="none" />
+                <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" fill="#dc8505" stroke="#dc8505" /></svg>
+            <span>New Note</span></button>
+    </div>
     <div class="schedule-part">
         <app-daily [daily]="dailyProg" (deletedProg)="deleteProg($event)" (showProgDetail)="openEditDialog($event)">
         </app-daily>
-        <app-weekly [weekly]="weeklyProg"  (deletedProg)="deleteProg($event)" (showProgDetail)="openEditDialog($event)"></app-weekly>
-        <app-montly [montly]="montlyProg"  (deletedProg)="deleteProg($event)" (showProgDetail)="openEditDialog($event)"></app-montly>
+        <app-weekly [weekly]="weeklyProg" (deletedProg)="deleteProg($event)" (showProgDetail)="openEditDialog($event)">
+        </app-weekly>
+        <app-montly [montly]="montlyProg" (deletedProg)="deleteProg($event)" (showProgDetail)="openEditDialog($event)">
+        </app-montly>
     </div>
 </div>

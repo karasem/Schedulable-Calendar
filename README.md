@@ -35,7 +35,7 @@ yarn install
 
 ## Adım 3: Uygulamayı Çalıştırma
 
-Öncelikle projenin kurulduğu frontend dizinine gidilir ve `yarn start` komutu ile proje çalıştırılır.
+Öncelikle projenin kurulduğu dizine gidilir ve `yarn start` komutu ile proje çalıştırılır.
 
 ```bash
 yarn start -o
